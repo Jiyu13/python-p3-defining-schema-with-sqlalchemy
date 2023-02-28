@@ -21,7 +21,10 @@ class Student(Base):
 
 
 if __name__ == '__main__':
+    # create an engine that points to the local db file
     engine = create_engine("sqlite:///students.db")
+
+    # create table
     Base.metadata.create_all(engine)
 
 
